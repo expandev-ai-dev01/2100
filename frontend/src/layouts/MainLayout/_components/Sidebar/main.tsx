@@ -5,12 +5,10 @@ import {
   LayoutDashboardIcon,
   PackageIcon,
   ShoppingCartIcon,
-  UsersIcon,
-  FileTextIcon,
-  SettingsIcon,
   FileSpreadsheetIcon,
   TableIcon,
   ComponentIcon,
+  ShoppingBagIcon,
 } from 'lucide-react';
 
 interface SidebarProps {
@@ -27,10 +25,8 @@ export function Sidebar({ className, onItemClick }: SidebarProps) {
     { label: 'Tabela Avançada', icon: TableIcon, path: '/users' },
     { label: 'Componentes UI', icon: ComponentIcon, path: '/ui-components' },
     { label: 'Produtos', icon: PackageIcon, path: '/products' },
-    { label: 'Pedidos', icon: ShoppingCartIcon, path: '/orders' },
-    { label: 'Usuários', icon: UsersIcon, path: '/users-old' },
-    { label: 'Relatórios', icon: FileTextIcon, path: '/reports' },
-    { label: 'Configurações', icon: SettingsIcon, path: '/settings' },
+    { label: 'Pedidos', icon: ShoppingBagIcon, path: '/orders' },
+    { label: 'Carrinho', icon: ShoppingCartIcon, path: '/checkout' },
   ];
 
   return (

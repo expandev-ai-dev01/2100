@@ -22,6 +22,18 @@ const UserTablePage = lazy(() =>
 const UIComponentsPage = lazy(() =>
   import('@/pages/UIComponents').then((module) => ({ default: module.UIComponentsPage }))
 );
+const ProductsPage = lazy(() =>
+  import('@/pages/Products').then((module) => ({ default: module.ProductsPage }))
+);
+const ProductDetailsPage = lazy(() =>
+  import('@/pages/ProductDetails').then((module) => ({ default: module.ProductDetailsPage }))
+);
+const CheckoutPage = lazy(() =>
+  import('@/pages/Checkout').then((module) => ({ default: module.CheckoutPage }))
+);
+const OrdersPage = lazy(() =>
+  import('@/pages/Orders').then((module) => ({ default: module.OrdersPage }))
+);
 const NotFoundPage = lazy(() =>
   import('@/pages/NotFound').then((module) => ({ default: module.NotFoundPage }))
 );
@@ -100,6 +112,38 @@ const routes = createBrowserRouter([
         element: (
           <ProtectedRoute>
             <UIComponentsPage />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: 'products',
+        element: (
+          <ProtectedRoute>
+            <ProductsPage />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: 'products/:id',
+        element: (
+          <ProtectedRoute>
+            <ProductDetailsPage />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: 'checkout',
+        element: (
+          <ProtectedRoute>
+            <CheckoutPage />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: 'orders',
+        element: (
+          <ProtectedRoute>
+            <OrdersPage />
           </ProtectedRoute>
         ),
       },
