@@ -1,0 +1,10 @@
+export * from './components/StepIndicator';
+export * from './components/Step1PersonalData';
+export * from './components/Step2Address';
+export * from './components/Step3Documents';
+export * from './components/Step4Confirmation';
+export * from './components/FormNavigation';
+export * from './hooks/useComplexForm';
+export * from './services/complexFormService';
+export * from './validations';
+export type { ComplexFormData, FileMetadata } from './types/models';

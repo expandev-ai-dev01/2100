@@ -13,6 +13,9 @@ const RegisterPage = lazy(() =>
 const DashboardPage = lazy(() =>
   import('@/pages/Dashboard').then((module) => ({ default: module.DashboardPage }))
 );
+const ComplexFormPage = lazy(() =>
+  import('@/pages/ComplexForm').then((module) => ({ default: module.ComplexFormPage }))
+);
 const NotFoundPage = lazy(() =>
   import('@/pages/NotFound').then((module) => ({ default: module.NotFoundPage }))
 );
@@ -67,6 +70,14 @@ const routes = createBrowserRouter([
         element: (
           <ProtectedRoute>
             <DashboardPage />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: 'complex-form',
+        element: (
+          <ProtectedRoute>
+            <ComplexFormPage />
           </ProtectedRoute>
         ),
       },

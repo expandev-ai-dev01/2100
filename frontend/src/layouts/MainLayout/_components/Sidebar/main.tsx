@@ -8,6 +8,7 @@ import {
   UsersIcon,
   FileTextIcon,
   SettingsIcon,
+  FileSpreadsheetIcon,
 } from 'lucide-react';
 
 interface SidebarProps {
@@ -20,6 +21,7 @@ export function Sidebar({ className, onItemClick }: SidebarProps) {
 
   const items = [
     { label: 'Dashboard', icon: LayoutDashboardIcon, path: '/dashboard' },
+    { label: 'Formulário Complexo', icon: FileSpreadsheetIcon, path: '/complex-form' },
     { label: 'Produtos', icon: PackageIcon, path: '/products' },
     { label: 'Pedidos', icon: ShoppingCartIcon, path: '/orders' },
     { label: 'Usuários', icon: UsersIcon, path: '/users' },
