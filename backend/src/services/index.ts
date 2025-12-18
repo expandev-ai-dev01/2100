@@ -9,3 +9,4 @@
 export * from './dashboard';
 export * from './complexForm';
 export * from './uiComponents';
+export * as notificationService from './notification';

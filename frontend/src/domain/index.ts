@@ -5,3 +5,4 @@ export * as complexForm from './complexForm/_module';
 export * as userTable from './userTable/_module';
 export * as uiComponents from './uiComponents/_module';
 export * as ecommerce from './ecommerce/_module';
+export * as notification from './notification/_module';

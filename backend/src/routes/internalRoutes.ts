@@ -10,6 +10,7 @@ import { Router } from 'express';
 import * as dashboardController from '@/api/internal/dashboard/controller';
 import * as complexFormController from '@/api/internal/complex-form/controller';
 import * as uiComponentsController from '@/api/internal/ui-components/controller';
+import * as notificationController from '@/api/internal/notification/controller';
 
 const router = Router();
 
@@ -47,5 +48,22 @@ router.post('/ui-components/tab', uiComponentsController.switchTabHandler);
 router.post('/ui-components/accordion', uiComponentsController.toggleAccordionHandler);
 router.post('/ui-components/toast', uiComponentsController.createToastHandler);
 router.delete('/ui-components/toast/:id', uiComponentsController.dismissToastHandler);
+
+/**
+ * @rule {be-route-configuration}
+ * Notification routes - /api/internal/notification
+ */
+router.get('/notification', notificationController.getStateHandler);
+router.post('/notification/toast', notificationController.createToastHandler);
+router.post('/notification/push', notificationController.createPushHandler);
+router.post('/notification/modal', notificationController.createModalHandler);
+router.patch('/notification/:id/read', notificationController.markAsReadHandler);
+router.delete('/notification/:id', notificationController.dismissHandler);
+router.get('/notification/preferences', notificationController.getPreferencesHandler);
+router.put('/notification/preferences', notificationController.updatePreferencesHandler);
+router.post('/notification/preferences/reset', notificationController.resetPreferencesHandler);
+router.post('/notification/websocket/simulate', notificationController.simulateWebSocketHandler);
+router.get('/notification/history', notificationController.getHistoryHandler);
+router.delete('/notification/history', notificationController.clearHistoryHandler);
 
 export default router;

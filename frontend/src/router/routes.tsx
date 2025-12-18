@@ -22,6 +22,9 @@ const UserTablePage = lazy(() =>
 const UIComponentsPage = lazy(() =>
   import('@/pages/UIComponents').then((module) => ({ default: module.UIComponentsPage }))
 );
+const NotificationsPage = lazy(() =>
+  import('@/pages/Notifications').then((module) => ({ default: module.NotificationsPage }))
+);
 const ProductsPage = lazy(() =>
   import('@/pages/Products').then((module) => ({ default: module.ProductsPage }))
 );
@@ -112,6 +115,14 @@ const routes = createBrowserRouter([
         element: (
           <ProtectedRoute>
             <UIComponentsPage />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: 'notifications',
+        element: (
+          <ProtectedRoute>
+            <NotificationsPage />
           </ProtectedRoute>
         ),
       },

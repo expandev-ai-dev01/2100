@@ -9,6 +9,7 @@ import {
   TableIcon,
   ComponentIcon,
   ShoppingBagIcon,
+  BellIcon,
 } from 'lucide-react';
 
 interface SidebarProps {
@@ -24,6 +25,7 @@ export function Sidebar({ className, onItemClick }: SidebarProps) {
     { label: 'Formulário Complexo', icon: FileSpreadsheetIcon, path: '/complex-form' },
     { label: 'Tabela Avançada', icon: TableIcon, path: '/users' },
     { label: 'Componentes UI', icon: ComponentIcon, path: '/ui-components' },
+    { label: 'Notificações', icon: BellIcon, path: '/notifications' },
     { label: 'Produtos', icon: PackageIcon, path: '/products' },
     { label: 'Pedidos', icon: ShoppingBagIcon, path: '/orders' },
     { label: 'Carrinho', icon: ShoppingCartIcon, path: '/checkout' },
