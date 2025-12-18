@@ -6,4 +6,4 @@
  * @module instances
  */
 
-
+export * from './dashboard';
