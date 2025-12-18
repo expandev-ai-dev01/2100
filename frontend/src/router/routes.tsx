@@ -19,6 +19,9 @@ const ComplexFormPage = lazy(() =>
 const UserTablePage = lazy(() =>
   import('@/pages/UserTable').then((module) => ({ default: module.UserTablePage }))
 );
+const UIComponentsPage = lazy(() =>
+  import('@/pages/UIComponents').then((module) => ({ default: module.UIComponentsPage }))
+);
 const NotFoundPage = lazy(() =>
   import('@/pages/NotFound').then((module) => ({ default: module.NotFoundPage }))
 );
@@ -89,6 +92,14 @@ const routes = createBrowserRouter([
         element: (
           <ProtectedRoute>
             <UserTablePage />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: 'ui-components',
+        element: (
+          <ProtectedRoute>
+            <UIComponentsPage />
           </ProtectedRoute>
         ),
       },

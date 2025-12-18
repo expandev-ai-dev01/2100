@@ -8,3 +8,4 @@
 
 export * from './dashboard';
 export * from './complexForm';
+export * from './uiComponents';
