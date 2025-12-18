@@ -9,6 +9,7 @@ import {
   FileTextIcon,
   SettingsIcon,
   FileSpreadsheetIcon,
+  TableIcon,
 } from 'lucide-react';
 
 interface SidebarProps {
@@ -22,9 +23,10 @@ export function Sidebar({ className, onItemClick }: SidebarProps) {
   const items = [
     { label: 'Dashboard', icon: LayoutDashboardIcon, path: '/dashboard' },
     { label: 'Formulário Complexo', icon: FileSpreadsheetIcon, path: '/complex-form' },
+    { label: 'Tabela Avançada', icon: TableIcon, path: '/users' },
     { label: 'Produtos', icon: PackageIcon, path: '/products' },
     { label: 'Pedidos', icon: ShoppingCartIcon, path: '/orders' },
-    { label: 'Usuários', icon: UsersIcon, path: '/users' },
+    { label: 'Usuários', icon: UsersIcon, path: '/users-old' },
     { label: 'Relatórios', icon: FileTextIcon, path: '/reports' },
     { label: 'Configurações', icon: SettingsIcon, path: '/settings' },
   ];

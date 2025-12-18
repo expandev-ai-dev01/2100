@@ -16,6 +16,9 @@ const DashboardPage = lazy(() =>
 const ComplexFormPage = lazy(() =>
   import('@/pages/ComplexForm').then((module) => ({ default: module.ComplexFormPage }))
 );
+const UserTablePage = lazy(() =>
+  import('@/pages/UserTable').then((module) => ({ default: module.UserTablePage }))
+);
 const NotFoundPage = lazy(() =>
   import('@/pages/NotFound').then((module) => ({ default: module.NotFoundPage }))
 );
@@ -78,6 +81,14 @@ const routes = createBrowserRouter([
         element: (
           <ProtectedRoute>
             <ComplexFormPage />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: 'users',
+        element: (
+          <ProtectedRoute>
+            <UserTablePage />
           </ProtectedRoute>
         ),
       },
